@@ -192,6 +192,86 @@ main{
    color: #000;
 }
 
+/* Contact form */
+#main-contact-container{
+   display: flex;
+   flex-direction: row;
+}
+
+#img-contact, #contact-container{
+   flex: 1 1 0;
+	height: 100%;
+   text-align: left;
+}
+
+#img-contact{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 150px;
+}
+
+#contact-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 150px;
+}
+
+#contact-container h2{
+   font-size: 42px;
+   margin-bottom: 10px;
+}
+
+#contact-container p{
+   margin-bottom: 10px;
+   font-size: 20px;
+}
+
+#form-contact input, #form-contact textarea{
+   position: relative;
+   margin-left: auto;
+   margin-right: auto;
+   width: 200px;
+   padding: 10px 20px;
+   font-size: 16px;
+   margin-left: 10px;
+   margin-right: 10px;
+   margin-bottom: 20px;
+}
+
+#form-contact input[type="email"]{
+   width: 400px;
+}
+
+#email:focus{
+   width: 400px;
+}
+
+#form-contact textarea{
+   width: 500px;
+   height: 150px;
+}
+
+#form-contact input[type="submit"]{
+   display: block;
+   position: relative;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: #333;
+   color: #fff;
+   cursor: pointer;
+   border: none;
+   transition: .5s ease;
+}
+
+#form-contact input[type="submit"]:hover{
+   background-color: #FFF;
+   color: #333;
+   border: 1px solid #333;
+}
+
 /* Footer */
 footer{
    width: 100%;
@@ -203,51 +283,121 @@ footer{
    padding: 30px 0;
 }
 
-/* Mobile */
+/* Responsive */
+@media(max-width: 1050px){
+   /* Contact Area */
+   #main-contact-container{
+      flex-direction: column;
+      flex-basis: 100%;
+   }
 
-@media(max-width: 480px){
+   #contact-container{
+      order: -1;
+      margin-top: 70px;
+   }
+
+   #img-contact {
+      justify-content: center;
+      align-items: center;
+      margin-top: 70px;
+   }
+
+   #img-contact img{
+      max-width:300px;
+      max-height:300px;
+      margin-bottom: 150px;
+      
+   }
+
+   @media(max-width: 480px){
+
+      /* Home */
+      header{
+         width: 100%;
+      }
    
-   /* Home */
-   header{
-      width: 100%;
-   }
-
-   #logo{
-      display: block;
-      position: relative;
-      margin: 0 auto;
-      left: 0;
-      width: 50px;
-   }
-
-   #navbar{
-      display: none;
-   }
-
-   #title-container{
-      min-width: 100%;
-      margin-top: 20px;
-   }
-
-   #posts-container{
-      margin-top: 20px;
-   }
-
-   .post-box{
-      flex: 100% 1 0;
-      padding: 15px;
-      margin: 0;
-   }
-
-   /* Post */
-   #post-container{
-      grid-template-columns: 100%;
-      padding: 15px;
-      grid-template-areas: "main" "sidebar";
-   }
-
-   .img-container img{
-      width: 100%;
-   }
+      #logo{
+         display: block;
+         position: relative;
+         margin: 0 auto;
+         left: 0;
+         width: 50px;
+      }
    
+      #navbar{
+         display: none;
+      }
+   
+      #title-container{
+         min-width: 100%;
+         margin-top: 20px;
+      }
+   
+      #posts-container{
+         margin-top: 20px;
+      }
+   
+      .post-box{
+         flex: 100% 1 0;
+         padding: 15px;
+         margin: 0;
+      }
+   
+      /* Post */
+      #post-container{
+         grid-template-columns: 100%;
+         padding: 15px;
+         grid-template-areas: "main" "sidebar";
+      }
+   
+      .img-container img{
+         width: 100%;
+      }
+   
+      /* Contact area*/
+      #contact-container h2{
+         font-size: 35px;
+      }
+   
+      #contact-container p{
+         font-size: 15px;
+         padding: 0 10px;
+         text-align: center;
+      }
+   
+      #form-contact{
+         margin-right: 10px;
+      }
+   
+      #form-contact textarea{
+         width: 350px;
+         height: 75px;
+      }
+   
+      #form-contact input[type="email"]{
+         width: 250px;
+      }
+   
+      #email:focus{
+         width: 250px;
+      }
+   
+      @media(max-width: 330px){
+         /* Contact Area */
+         #contact-container h2{
+            font-size: 32px;
+         }
+   
+         #contact-container p{
+            font-size: 14px;
+         }
+   
+         #form-contact textarea{
+            width: 260px;
+            height: 75px;
+         }
+      }
+   }
 }
+
+
