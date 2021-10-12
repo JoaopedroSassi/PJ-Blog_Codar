@@ -120,6 +120,78 @@ main{
    margin-right: 5px;
 }
 
+/* post */
+#post-container{
+   display: grid;
+   grid-template-columns: 75% 25%;
+   grid-template-rows: auto;
+   grid-template-areas: "main sidebar";
+   grid-gap: 10px;
+   padding-top: 30px;
+   max-width: 1200px;
+   margin: 0 auto;
+   margin-bottom: 200px;
+}
+
+.content-container{
+   grid-area: main;
+}
+
+#main-title{
+  font-size: 36px;
+  margin-bottom: 30px; 
+}
+
+#post-description{
+   font-style: italic;
+   margin-bottom: 40px;
+}
+
+.post-content{
+   line-height: 1.8;
+   margin: 10px 0;
+}
+
+.img-container{
+   margin-bottom: 30px;
+}
+
+.img-container img{
+   width: 60%;
+}
+
+/* Post Aside */
+.nav-container{
+   grid-area: sidebar;
+}
+
+#tags-title, #categories-title{
+   font-size: 24px;
+   margin-bottom: 10px;
+   background-color: #000;
+   color: #FFF;
+   text-align: center;
+   padding: 10px;
+   font-weight: 300;
+}
+
+.tag-list, #categories-list{
+   list-style: none;
+}
+
+.tag-list li, #categories-list li{
+   margin-bottom: 10px;
+}
+
+.tag-list a, #categories-list a{
+   color: #666;
+   transition: .5s;
+}
+
+.tag-list a:hover, #categories-list a:hover{
+   color: #000;
+}
+
 /* Footer */
 footer{
    width: 100%;
